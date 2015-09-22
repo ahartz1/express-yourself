@@ -110,7 +110,7 @@ def test_money():
     assert not v.money("$$31")
 
 
-@xfail
+
 def test_zip():
     assert v.zipcode("63936")
     assert v.zipcode("50583")

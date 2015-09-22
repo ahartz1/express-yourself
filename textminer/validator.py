@@ -33,7 +33,8 @@ def phone_number(s):
 def money(s):
     return re.match(r'^\$\d{1,3}([,]?(\d{3}))*([.](\d{2}))?$', s)
 
-
+def zipcode(s):
+    return re.match(r'^\d{5}(-(\d{4}))?$', s)
 
 
 
