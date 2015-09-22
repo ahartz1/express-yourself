@@ -15,6 +15,17 @@ def word(s):
 
 def words(s, count=None):
     if count == None:
-        return re.match(r'^((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+)\s*)*$', s)
+        return re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*)*$', s)
     else:
-        return re.match(r'^((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+)\s*){count}$', s)
+        print(re.split(r'((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*', s))
+        s_split = re.split(r'((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*', s)
+        if len(s_split) == count:
+            return True
+        else:
+            return False
+
+def phone_number(s):
+    return re.match(r'^\(?[0-9]{3}\)?[ .-]?[0-9]{3}[.-]?[0-9]{4}$', s)
+
+def money(s):
+    pass
