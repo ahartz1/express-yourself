@@ -1,6 +1,7 @@
 import re
 import textminer.validator as v
 
+
 def words(s):
     if not v.words(s):
         return None
@@ -11,6 +12,7 @@ def words(s):
             ret.append(word)
     return ret
 
+
 def phone_number(s):
     if v.phone_number(s):
         ret = {}
@@ -20,6 +22,21 @@ def phone_number(s):
         return ret
     else:
         return None
+
+
+def money(s):
+    if v.money(s):
+        ret = {}
+        dollars = re.sub(r'[\$,]', '', s)
+        ret['currency'] = '$'
+        ret['amount'] = float(dollars)
+        return ret
+    else:
+        return None
+
+
+
+
 
 
 
