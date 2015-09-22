@@ -1,2 +1,5 @@
 .direnv
 .envrc
+.cache
+textminer/__pycache__/
+textminer/tests/__pycache__/
