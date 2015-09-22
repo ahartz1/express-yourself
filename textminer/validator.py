@@ -31,4 +31,21 @@ def phone_number(s):
     return re.match(r'^\(?[0-9]{3}\)?[ .-]?[0-9]{3}[.-]?[0-9]{4}$', s)
 
 def money(s):
-    pass
+    return re.match(r'^\$\d{1,3}([,]?(\d{3}))*([.](\d{2}))?$', s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
