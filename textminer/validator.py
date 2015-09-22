@@ -36,7 +36,8 @@ def money(s):
 def zipcode(s):
     return re.match(r'^\d{5}(-(\d{4}))?$', s)
 
-
+def date(s):
+    return re.match(r'^(\d{1,2}[/-]\d{1,2}[/-]\d{4})|(\d{4}[/-]\d{1,2}[/-]\d{1,2})$', s)
 
 
 
