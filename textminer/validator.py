@@ -14,12 +14,15 @@ def word(s):
     return re.match(r'^(([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+)$', s)
 
 def words(s, count=None):
+    if s == '':
+        return False
     if count == None:
         return re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*)*$', s)
     else:
         print(re.split(r'((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*', s))
-        s_split = re.split(r'((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*', s)
-        if len(s_split) == count:
+        s_split = re.split(r'\s', s)
+        if len(s_split) == count and \
+           re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*)*$', s):
             return True
         else:
             return False

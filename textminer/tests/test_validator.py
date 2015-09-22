@@ -47,7 +47,7 @@ def test_word():
     assert not v.word("bar*us")
 
 
-@xfail
+
 def test_words():
     """words can take an optional count argument. In case it exists, the text
     must match that number of words."""
@@ -84,7 +84,7 @@ def test_phone_numbers():
     assert not v.phone_number("mobile")
 
 
-@xfail
+
 def test_money():
     """We are just concerned with dollars here."""
 
