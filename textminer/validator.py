@@ -11,18 +11,23 @@ def hex(s):
     return re.match(r'^[A-Fa-f0-9]+$', s)
 
 def word(s):
-    return re.match(r'^(([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+)$', s)
+    return re.match(r'^(([A-Za-z]+-)+[A-Za-z]+)|'
+                    r'([0-9]+-[A-Za-z]+)|([A-Za-z]+)$', s)
 
 def words(s, count=None):
     if s == '':
         return False
     if count == None:
-        return re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*)*$', s)
+        return re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|'
+                        r'([0-9]+-[A-Za-z]+)|'
+                        r'([A-Za-z]+))\s*)*$', s)
     else:
-        print(re.split(r'((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*', s))
+        print(re.split(r'((([A-Za-z]+-)+[A-Za-z]+)|'
+                       r'([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*', s))
         s_split = re.split(r'\s', s)
         if len(s_split) == count and \
-           re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*)*$', s):
+           re.match(r'^(((([A-Za-z]+-)+[A-Za-z]+)|'
+                    r'([0-9]+-[A-Za-z]+)|([A-Za-z]+))\s*)*$', s):
             return True
         else:
             return False
@@ -37,7 +42,8 @@ def zipcode(s):
     return re.match(r'^\d{5}(-(\d{4}))?$', s)
 
 def date(s):
-    return re.match(r'^(\d{1,2}[/-]\d{1,2}[/-]\d{4})|(\d{4}[/-]\d{1,2}[/-]\d{1,2})$', s)
+    return re.match(r'^(\d{1,2}[/-]\d{1,2}[/-]\d{4})|'
+                    r'(\d{4}[/-]\d{1,2}[/-]\d{1,2})$', s)
 
 
 
