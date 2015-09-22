@@ -57,7 +57,7 @@ def test_money(input, expected):
     assert s.money(input) == expected
 
 
-@xfail
+
 @params("input,expected", [
     ("63936", {"zip": "63936", "plus4": None}),
     ("50583", {"zip": "50583", "plus4": None}),
@@ -82,7 +82,7 @@ def test_zip(input, expected):
     ("9/4", None),
     ("2015", None),
 ])
-def test_date(input, expected):
+def test_date_1(input, expected):
     assert s.date(input) == expected
 
 
@@ -97,7 +97,7 @@ def test_date(input, expected):
     ("9/4", None),
     ("2015", None),
 ])
-def test_date(input, expected):
+def test_date_2(input, expected):
     assert s.date(input) == expected
 
 

@@ -34,7 +34,17 @@ def money(s):
     else:
         return None
 
-
+def zipcode(s):
+    if v.zipcode(s):
+        ret = {}
+        ret['zip'] = s[:5]
+        if len(s) == 10:
+            ret['plus4'] = s[6:]
+        else:
+            ret['plus4'] = None
+        return ret
+    else:
+        return None
 
 
 
