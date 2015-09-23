@@ -34,6 +34,7 @@ def money(s):
     else:
         return None
 
+
 def zipcode(s):
     if v.zipcode(s):
         ret = {}
@@ -62,21 +63,3 @@ def date(s):
         return ret
     else:
         return None
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
