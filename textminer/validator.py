@@ -52,3 +52,15 @@ def zipcode(s):
 def date(s):
     return re.match(r'^(\d{1,2}[/-]\d{1,2}[/-]\d{4})|'
                     r'(\d{4}[/-]\d{1,2}[/-]\d{1,2})$', s)
+
+
+def email(s):
+    return re.match(r'[A-Za-z0-9.]*\@([A-Za-z0-9]*.)+[A-Za-z]*', s)
+
+
+
+
+
+
+
+#
