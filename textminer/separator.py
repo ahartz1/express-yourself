@@ -47,8 +47,21 @@ def zipcode(s):
         return None
 
 
-
-
+def date(s):
+    if v.date(s):
+        ret = {}
+        parsed = re.split(r'[/-]', s)
+        if len(parsed[0]) == 4:
+            ret['year'] = int(parsed[0])
+            ret['month'] = int(parsed[1])
+            ret['day'] = int(parsed[2])
+        else:
+            ret['month'] = int(parsed[0])
+            ret['day'] = int(parsed[1])
+            ret['year'] = int(parsed[2])
+        return ret
+    else:
+        return None
 
 
 

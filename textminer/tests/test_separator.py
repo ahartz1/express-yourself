@@ -73,7 +73,7 @@ def test_zip(input, expected):
     assert s.zipcode(input) == expected
 
 
-@xfail
+
 @params("input,expected", [
     ("9/4/1976", {"month": 9, "day": 4, "year": 1976}),
     ("1976-09-04", {"month": 9, "day": 4, "year": 1976}),
